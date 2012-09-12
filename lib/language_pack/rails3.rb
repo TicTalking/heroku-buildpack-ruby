@@ -61,10 +61,10 @@ private
             cache_store "public/assets"
           else
             log "assets_precompile", :status => "failure"
-            puts "Precompiling assets failed, enabling runtime asset compilation"
-            install_plugin("rails31_enable_runtime_asset_compilation")
+            puts "Precompiling assets failed, unable to deploy."
             puts "Please see this article for troubleshooting help:"
             puts "http://devcenter.heroku.com/articles/rails31_heroku_cedar#troubleshooting"
+            exit 1
           end
         end
       end
