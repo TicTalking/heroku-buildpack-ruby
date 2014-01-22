@@ -83,9 +83,6 @@ private
         if precompile.success?
           log "assets_precompile", :status => "success"
           puts "Asset precompilation completed (#{"%.2f" % precompile.time}s)"
-          puts "Caching assets"
-          cache_store "app/assets"
-          cache_store "public/assets"
         else
           log "assets_precompile", :status => "failure"
           error "Precompiling assets failed."
